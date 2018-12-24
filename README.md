@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/iiddoo/python-sample-package.svg?branch=master)](https://travis-ci.org/iiddoo/python-sample-package)
+
 # python-seed
 
 This is a starter repo for creating a new python package. Included are templates for standard files as well as best practices.
