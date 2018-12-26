@@ -2,10 +2,11 @@ language: python
 python:
   - "2.7"
   - "3.6"
-# command to install dependencies
 install:
-  - pip install -r requirements-dev.txt
-# command to run tests
+- pip install -r requirements-dev.txt
 script:
   - pytest
-  - py.test --cov=myPackage tests/
+  - py.test --cov-report term-missing --cov=myPackage tests/
+#  - py.test --cov-report html --cov=myPackage tests/
+after_success:
+  - coveralls
