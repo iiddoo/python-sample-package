@@ -12,6 +12,7 @@ after_success:
 - coveralls
 - pip install -r requirements.txt
 - python3 setup.py sdist bdist_wheel
+- python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 deploy:
   provider: pypi
   user: iiddoo
@@ -20,9 +21,3 @@ deploy:
   distributions: https://test.pypi.org/legacy/
   on:
     branch: master
-#  script:
-#    - pip install --user --upgrade setuptools wheel twine numpy
-#    - python3 setup.py sdist bdist_wheel
-#    - python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-#  before_script:
-#    - bumpversion minor setup.py
