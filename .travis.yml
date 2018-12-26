@@ -3,9 +3,8 @@ python:
   - "2.7"
   - "3.6"
 install:
-  - pip install -e . --use-mirrors
+- pip install -r requirements-dev.txt
 before_script:
-  - pip install -r requirements-dev.txt --use-mirrors
   - pytest
   - py.test --cov=myPackage tests/
   - cd -
