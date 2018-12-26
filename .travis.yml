@@ -2,10 +2,14 @@ language: python
 python:
   - "2.7"
   - "3.6"
-# command to install dependencies
 install:
-  - pip install -r requirements-dev.txt
-# command to run tests
-script:
+  - pip install -e . --use-mirrors
+before_script:
+  - pip install -r requirements-dev.txt --use-mirrors
   - pytest
   - py.test --cov=myPackage tests/
+  - cd -
+script:
+  - py.test coveralls/tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
+after_success:
+  - coveralls
