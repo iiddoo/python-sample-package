@@ -10,15 +10,14 @@ script:
 after_script: cd ~
 after_success:
 - coveralls
+before_deploy:
 - pip install -r requirements.txt
 - python3 setup.py sdist bdist_wheel
-skip_cleanup: true
 deploy:
   provider: pypi
   user: iiddoo
   password:
     secure: ea7OLMUkCeTkIZmAZaiNgBlk+RQWIDFdstXspauFZtn/ofGVYMJPMoobuQMjGc21PFz0NNedcUVeyqL3hU4RkoV6I9b2yTQ2b4Txh2lQJrjpu9SnDqSIF3SnljuoUxBJFAJvouD/k57K8OWYPe329g6sGbxrD4Hsw09YnO4zBFrf92zriD9HOZOkWxxVnojxoF9LGkCKOufweo3Eqa0GB6GTPhArwlQ8rD5ysmt5VWYDb32nbw9Wthgybgc7pTr9Dg1P3Ba2PSrS2hrorR3vrevhunwz8KW2qESjpQG5gpK79xSubnUgi1WRYA32x+R1ENx+KjKEpjKCagS92n8JoLLhlOTW0DfaqPNTEqQKvw8bS5q7+q1uRb3+vDkzjyuCcsYvjIug9BBhFsfn/OE8e8KRB9ocP02BKrPCB9TZ0pvFH/uXHeCMj6ALL5EJl31umxxxN+JUmfdHgtaY5jhv2syBycrnHmAGDi0IxQk5LzFp+nJw+Ug6NfchD0r/8UpB5kjD5UtLNxf8f8Hx6aCAD+218nMOnp3U/JNlOSroVLNr4DaEi9LNFR7CBNUWQKN49X5JQJc56MLHqViNjnhvc32jAA/Q1vX3eQuLPeIL8/g9i2az3sonwStez55ZFazaUIuBmsTw2BGiPmltvovD5zDoRLvEbkibHzTTSIK1CM8=
-  distributions: https://test.pypi.org/legacy/
   on:
     branch: master
   skip_cleanup: true
