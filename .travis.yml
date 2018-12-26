@@ -3,10 +3,21 @@ python:
   - "2.7"
   - "3.6"
 install:
-- pip install -r requirements-dev.txt
+  - pip install -r requirements-dev.txt
 script:
   - pytest
   - py.test --cov-report term-missing --cov=myPackage tests/
 #  - py.test --cov-report html --cov=myPackage tests/
 after_success:
   - coveralls
+deploy:
+#  script:
+#    - pip install --user --upgrade setuptools wheel twine numpy
+#    - python3 setup.py sdist bdist_wheel
+#    - python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+  provider: pypi
+  user: iiddoo
+  password: i933wakk
+  distributions: https://test.pypi.org/legacy/
+  on:
+    branch: master
