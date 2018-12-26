@@ -8,6 +8,7 @@ script:
   - pytest
   - py.test --cov-report term-missing --cov=myPackage tests/
 #  - py.test --cov-report html --cov=myPackage tests/
+after_script: cd ~
 after_success:
   - coveralls
 deploy:
@@ -15,6 +16,8 @@ deploy:
 #    - pip install --user --upgrade setuptools wheel twine numpy
 #    - python3 setup.py sdist bdist_wheel
 #    - python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+#  before_script:
+#    - bumpversion minor setup.py
   provider: pypi
   user: iiddoo
   password: i933wakk
