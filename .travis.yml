@@ -6,7 +6,7 @@ install:
 - pip install -r requirements-dev.txt
 script:
   - pytest
-  - py.test --cov=myPackage tests/
-  - cd -
+  - py.test --cov-report term-missing --cov=myPackage tests/
+#  - py.test --cov-report html --cov=myPackage tests/
 after_success:
   - coveralls
