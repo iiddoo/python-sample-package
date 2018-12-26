@@ -12,6 +12,7 @@ after_success:
 - coveralls
 - pip install -r requirements.txt
 - python3 setup.py sdist bdist_wheel
+skip_cleanup: true
 deploy:
   provider: pypi
   user: iiddoo
@@ -20,3 +21,4 @@ deploy:
   distributions: https://test.pypi.org/legacy/
   on:
     branch: master
+  skip_cleanup: true
