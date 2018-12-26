@@ -1,10 +1,4 @@
-[![Build Status](https://travis-ci.org/iiddoo/python-sample-package.svg?branch=master)](https://travis-ci.org/iiddoo/python-sample-package)
-
-[![PyPI version](https://badge.fury.io/py/python-sample-package.svg)](https://badge.fury.io/py/python-sample-package)
-
-[![Coverage Status](https://coveralls.io/repos/github/iiddoo/python-sample-package/badge.svg?branch=dev)](https://coveralls.io/github/iiddoo/python-sample-package?branch=dev)
-
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Build Status](https://travis-ci.org/iiddoo/python-sample-package.svg?branch=master)](https://travis-ci.org/iiddoo/python-sample-package)             [![PyPI version](https://badge.fury.io/py/python-sample-package.svg)](https://badge.fury.io/py/python-sample-package)           [![Coverage Status](https://coveralls.io/repos/github/iiddoo/python-sample-package/badge.svg?branch=dev)](https://coveralls.io/github/iiddoo/python-sample-package?branch=dev)          [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
 
 # python-example-package
